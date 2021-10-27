@@ -1,0 +1,12 @@
+.cardStyle{
+    width:40%;
+    box-shadow: 0 0 3px gray;
+    padding:30px;
+}
+
+.cardBody{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:10px solid green;
+}
