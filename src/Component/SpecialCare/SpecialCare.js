@@ -1,10 +1,13 @@
 import React from 'react';
-import './SpecialCare.css'
+import './SpecialCare.css';
 
 const SpecialCare = () => {
     return (
         <div className="specialCare">
-            <h2>This is special care section</h2>
+            
+            <div className="speical-box">
+                <h2>This section  is under construction</h2>
+            </div>
         </div>
     );
 };

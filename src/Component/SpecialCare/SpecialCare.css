@@ -1,3 +1,12 @@
-.speciaCare{
-    
+.specialCare{
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+.speical-box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:red;
 }

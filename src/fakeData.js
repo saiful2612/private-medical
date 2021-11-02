@@ -1,7 +1,7 @@
 const data=[
     {id:1,
     name :'Eye Care',
-    image:'./images/eyecare600x400.jpg',
+    image:'/images/eyecare600x400.jpg',
     description: 'All types of eye treatment is available here. A group of expert and experienced eye specialist always serves the patients as their need',
     cost: 2500,
     benifits: 'We have provided any four types eye diagnosis at free cost in all our eye patient',

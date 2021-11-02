@@ -1,0 +1,16 @@
+.about-body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+.box{
+    /* border:1px solid red; */
+    padding: 15px;
+    border-radius:10px;
+}
+
+.image{
+    border-radius: 10px;
+}

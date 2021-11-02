@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom';
 import './ShowCard.css';
 
 const ShowCard = (props) => {
-    const{name, description, image, cost,benifits, doctor, cabin } = props.desireService || {};
+    const{name, description, image, cost,benifits, doctor, cabin } = props.desireService || { };
     
     console.log(image);
 
     return (
-        <div className="cardBody pt-5">
-            <div className="cardStyle">
-                <h1 className="text-center">Our Factilities</h1>
-                <h3 className="text-center text-danger">{name}</h3>
+        <div className="container cardBody row pt-5">
+            <div className="cardStyles text-center text-sm-center col-12">
+                <h1 className=" headline">Our Factilities</h1>
+                <h3 className="">in <span className="text-danger"> {name} </span> unit</h3>
                 <img src={image} alt="" />
-                <h4>Treatment Fee : {cost}</h4>
-                <p>{description}</p>
-                <p>We offer : <small>{benifits}</small> </p>
-                <h4>Specialist Doctor: {doctor}</h4>
-                <h4>Number of cabin :{cabin}</h4>
+                <h4>Checkup and Service fee : {cost} Taka</h4>
+                <p className="px-4">{description}</p>
+                <p> <span className="offer-writting">We offer :</span> <small>{benifits}</small> </p>
+                <h5>Specialist Doctor : {doctor}</h5>
+                <h6>Number of cabin : {cabin}</h6>
                 
-                <Link to="/home">Back to Home</Link>
+                <Link to="/home"><button className="btn btn-primary button-style">Back to Home</button></Link>
             </div>
         </div>
     );

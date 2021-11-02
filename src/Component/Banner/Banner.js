@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div >
             <div className="banner">
-                <img src="./images/care-banner.jpg" alt="" />
+                <img className="img-fluid" src="./images/care-banner.jpg" alt="" />
             </div>
         </div>
     );

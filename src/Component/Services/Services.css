@@ -1,0 +1,9 @@
+.our-services-body{
+    disply:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cardImages img{
+    /* border-radius:10px; */
+}

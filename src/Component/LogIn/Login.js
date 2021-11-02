@@ -11,6 +11,7 @@ const Login = () => {
 
     const[email, setEmail]=useState('');
     const[password, setPassword]=useState('');
+    const[error, setError]= useState('');
 
 
     const handleGoogleLogIn = () =>{
@@ -21,6 +22,12 @@ const Login = () => {
             //const loggedInUser =result.user;
             //setUser(loggedInUser);
         })
+        .catch((error) => {
+            // const errorCode = error.code;
+            const errorMessage = "You are not the member of this site. Please, SIGN IN";
+            setError(errorMessage);
+            // ..
+          });
     }
 
     const handleLogin = e =>{
@@ -31,6 +38,10 @@ const Login = () => {
             //const loggedInUser =result.user;
             //setUser(loggedInUser);
         })
+        .catch((error) => {
+            const errorMessage ="You are not the member of this site. Please SIGN IN."
+            setError(errorMessage);
+          })
     };
 
     const handleEMailChange = e =>{
@@ -44,21 +55,28 @@ const Login = () => {
 
 
     return (
-        <div className="login-form">
-            <div>
-                <h2>Please Log In</h2>
-                <form onSubmit={handleLogin}>
-                    <input onBlur={handleEMailChange} type="email" />
+        <div className="login-form my-2">
+            <div className="login-area">
+                <h3 className="text-center">Please Log In</h3>
+                <form className="login-box" onSubmit={handleLogin}>
+                    <label htmlFor="">Email</label>
                     <br />
-                    <input onBlur={handlePasswordChange} type="password" />
+                    <input onBlur={handleEMailChange} type="email" required/>
                     <br />
-                    <input type="Submit" value="log in"/>
+                    <label htmlFor="">Password</label>
+                    <br />
+                    <input onBlur={handlePasswordChange} type="password" required/>
+                    <br />
+                    <input className="mt-3 login-btn" type="Submit" value="log in"/>
                 </form>
                 <br />
-                <p>New to Care? <Link to="/register">Create Account</Link></p>
-                <div>--------------------------</div>
-                <button className=" btn btn-warning" onClick={handleGoogleLogIn}>Google Sign in</button>
+                <p className="text-center">New to <span className="medicare">MediCARE</span> ? <br /> <Link to="/register"><button className="btn btn-success mt-3">Create Account</button></Link></p>
+                <div className="text-center">
+                    <p><small>or</small></p>
+                    <button className=" btn btn-warning" onClick={handleGoogleLogIn}>Google Sign in</button>
+                </div>
                 <br />
+                <div className="text-danger">{error}</div>
             </div>
             
         </div>

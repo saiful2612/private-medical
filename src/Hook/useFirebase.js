@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import intializeAuthentication from "../Firebase/firebase.initialize";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile, signOut } from "firebase/auth";
 
 
 intializeAuthentication()
@@ -30,6 +30,12 @@ const useFirebase= () =>{
         })
     },[])
 
+    const setUsername = name =>{
+        updateProfile( auth.currentUser, {displayName:name})
+        .then(result =>{ })
+    }
+
+
     const handleCustomRegistration = (email, password) =>{
         return createUserWithEmailAndPassword(auth, email, password);
     }
@@ -43,6 +49,7 @@ const useFirebase= () =>{
         handleGoogleSignIn,
         handleCustomRegistration,
         handleCustomLogIn,
+        setUsername,
         logout
     }
 
