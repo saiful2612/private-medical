@@ -62,7 +62,7 @@ const Register = () => {
 
     return (
         <div className="login-form">
-            <div className="login-area">
+            <div className="login-area my-2">
                 <h3 className="text-center">Please Register</h3>
                 <form className="login-box" onSubmit={ handleRegistration}>
                     <label htmlFor="">Name</label>
