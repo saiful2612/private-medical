@@ -1,3 +1,38 @@
+MediCARE 
+
+Site link: https://private-hospital-authentcation.web.app
+
+
+MediCARE is a modern private hospital for all types of people. Its a react base site with self made fake data.
+
+Feature :
+
+* It's a react based project, lots of component are built. 
+* Used React DOM Router
+* Used Firebase Authentication
+* Used custom & google login
+* Used firebase deployment
+* Used Bootstrap 4 with custom CSS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
