@@ -50,7 +50,7 @@ function App() {
           <PrivateRoute path="/details/:detailsId">
             <Details></Details>
           </PrivateRoute>
-          <Route path="/*">
+          <Route path="*">
             <NoDataFound></NoDataFound>
           </Route>
         </Switch>

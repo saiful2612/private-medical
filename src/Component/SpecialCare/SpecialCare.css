@@ -4,9 +4,16 @@
     min-height:100vh;
 }
 
-.speical-box{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:red;
+li{
+    color:#1E90FF;
+    font-weight: 600;
+    font-size:1rem;
+    list-style:none;
+}
+
+.care-headline{
+    font-weight: 600;
+    color:#4B0082;
+    margin-left:15px;
+    font-size: 2rem;
 }

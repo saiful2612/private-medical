@@ -20,5 +20,9 @@
 }
 
 .headline{
-    color: grey;
+    color: #800000;
+}
+
+.amount-style{
+    color:#3CB371;
 }

@@ -28,7 +28,7 @@ const useFirebase= () =>{
                 setUser(user);
             }
         })
-    },[])
+    },[auth])
 
     const setUsername = name =>{
         updateProfile( auth.currentUser, {displayName:name})

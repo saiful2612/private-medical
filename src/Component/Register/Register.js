@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Register.css';
 import { Link,useLocation, useHistory } from 'react-router-dom';
-import { useState } from 'react/cjs/react.development';
+// import { useState } from 'react/cjs/react.development';
 import useAuth from '../../Hook/useAuth';
 
 const Register = () => {
@@ -35,6 +35,7 @@ const Register = () => {
         .then(result =>{
             history.push(redirect_uri);
             setUsername(name)
+            window.location.reload();
             //const loggedInUser =result.user;
             //setUser(loggedInUser);
             console.log(result);

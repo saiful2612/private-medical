@@ -9,11 +9,12 @@ const ShowCard = (props) => {
 
     return (
         <div className="container cardBody row pt-5">
-            <div className="cardStyles text-center text-sm-center col-12">
+            <div className="cardStyles text-center text-sm-center col-12 mb-5">
                 <h1 className=" headline">Our Factilities</h1>
                 <h3 className="">in <span className="text-danger"> {name} </span> unit</h3>
-                <img src={image} alt="" />
-                <h4>Checkup and Service fee : {cost} Taka</h4>
+                <img src={image} className="img-fluid card-image" alt="" />
+            
+                <h4 className="mt-3">Checkup and Service fee : <span className="amount-style">{cost}</span> Taka</h4>
                 <p className="px-4">{description}</p>
                 <p> <span className="offer-writting">We offer :</span> <small>{benifits}</small> </p>
                 <h5>Specialist Doctor : {doctor}</h5>
